@@ -1,0 +1,81 @@
+import type { Template } from '../types'
+
+export const templates: Template[] = [
+  {
+    id: 'tpl1',
+    name: 'Client Proposal Pack',
+    category: 'Sales',
+    description:
+      'Cover, scope, pricing table, and signature page structured for professional services proposals.',
+    pages: 8,
+    downloads: 12450,
+    rating: 4.9,
+    cover: 'https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=900&h=700&fit=crop',
+    tags: ['proposal', 'pricing', 'signature'],
+    relatedToolIds: ['t1', 't9', 't4'],
+  },
+  {
+    id: 'tpl2',
+    name: 'NDA Agreement',
+    category: 'Legal',
+    description: 'Mutual NDA with editable party fields, governing law, and e-sign ready signature blocks.',
+    pages: 4,
+    downloads: 9820,
+    rating: 4.8,
+    cover: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=900&h=700&fit=crop',
+    tags: ['legal', 'nda', 'esign'],
+    relatedToolIds: ['t9', 't7', 't3'],
+  },
+  {
+    id: 'tpl3',
+    name: 'Invoice Suite',
+    category: 'Finance',
+    description: 'Clean invoice, credit note, and remittance advice with consistent branding blocks.',
+    pages: 3,
+    downloads: 15600,
+    rating: 4.7,
+    cover: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=900&h=700&fit=crop',
+    tags: ['invoice', 'finance', 'branding'],
+    relatedToolIds: ['t4', 't5', 't12'],
+  },
+  {
+    id: 'tpl4',
+    name: 'HR Offer Letter',
+    category: 'People',
+    description: 'Offer letter with compensation schedule, start date, and dual signature fields.',
+    pages: 2,
+    downloads: 7340,
+    rating: 4.8,
+    cover: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?w=900&h=700&fit=crop',
+    tags: ['hr', 'offer', 'onboarding'],
+    relatedToolIds: ['t9', 't7', 't6'],
+  },
+  {
+    id: 'tpl5',
+    name: 'Board Deck Shell',
+    category: 'Operations',
+    description: 'Title, agenda, KPI, and appendix slides ready to merge into a quarterly board PDF.',
+    pages: 12,
+    downloads: 5610,
+    rating: 4.6,
+    cover: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&h=700&fit=crop',
+    tags: ['board', 'kpi', 'ops'],
+    relatedToolIds: ['t1', 't5', 't10'],
+  },
+  {
+    id: 'tpl6',
+    name: 'Research Brief',
+    category: 'Marketing',
+    description: 'Insight summary with executive abstract, findings grid, and citation appendix.',
+    pages: 6,
+    downloads: 4480,
+    rating: 4.7,
+    cover: 'https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=900&h=700&fit=crop',
+    tags: ['research', 'brief', 'marketing'],
+    relatedToolIds: ['t3', 't8', 't6'],
+  },
+]
+
+export function getTemplateById(id: string) {
+  return templates.find((t) => t.id === id)
+}
